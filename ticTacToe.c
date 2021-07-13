@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<unistd.h>
 #include "utils.h"
 
 char square[10] = {'0', '1', '2', '3', '4', '5', '6', '7','8','9'};
@@ -37,6 +38,7 @@ void ticTacToe()
      if(gameStatus == 1)
      {
          printf("\nYou have won the game\n");
+         sleep(3);
      }
      player ++;
 
