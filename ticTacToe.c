@@ -36,7 +36,7 @@ void ticTacToe()
      gameStatus = checkForWin ();
      if(gameStatus == 1)
      {
-         printf("");
+         printf("\nYou have won the game\n");
      }
      player ++;
 
@@ -76,7 +76,7 @@ int checkForWin()
         returnValue =square[3];
 
     else if (square[1]== square[5] && square[5]== square[9])
-        returnValue =1;
+        returnValue =square[1];
 
     else if (square[1]!= '1' && square[2]!= '2' && square[3]!= '3' &&
     square[4]!= '4' && square[5]!= '5' && square[6]!='6' && square[7]!= '7'
