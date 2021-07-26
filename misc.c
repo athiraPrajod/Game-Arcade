@@ -23,8 +23,7 @@ OBJ *getPassageTo(OBJ *targetLocation)
    OBJ *obj;
    for (obj = objs; obj < endOfObjs; obj++)
    {
-      if (obj->location == player->location &&
-          obj->destination == targetLocation)
+      if (obj->location == player->location && obj->destination == targetLocation)
       {
          return obj;
       }

@@ -22,9 +22,9 @@ void main()
                 sleep(3);
                 break;
             
-            // case 2:
-            //     textAdv();
-            //     break;
+            case 2:
+                textAdv();
+                break;
 
             case 3:
                 ticTacToe();

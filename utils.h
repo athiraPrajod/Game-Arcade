@@ -1,3 +1,3 @@
 void hangman();
-//void textAdv();
+void textAdv();
 void ticTacToe();

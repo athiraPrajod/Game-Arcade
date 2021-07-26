@@ -1,8 +1,9 @@
 #include <stdio.h>
-#include <time.h>//time as seed value
-#include <stdlib.h>//random
-#include <string.h>//for strcopy
+#include <time.h>
+#include <stdlib.h>
+#include <string.h>
 #include "utils.h"
+
 int notin(char word[],int len,char l);
 void figure(int lives);
                                         

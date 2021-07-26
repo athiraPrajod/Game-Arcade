@@ -36,7 +36,7 @@ void ticTacToe()
      gameStatus = checkForWin ();
      if(gameStatus == 1)
      {
-         printf("");
+         printf(" ");
      }
      player ++;
 

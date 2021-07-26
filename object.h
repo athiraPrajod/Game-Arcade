@@ -3,6 +3,9 @@ typedef struct object {
    const char    **tags;
    struct object *location;
    struct object *destination;
+   const char    *details;
+   const char    *contents;
+   const char    *textGo;
    const char  *(*open)(struct object *);
    const char  *(*close)(struct object *);
    const char  *(*lock)(struct object *);
