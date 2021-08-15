@@ -39,6 +39,42 @@ void executeGo(const char *noun)
       printf("OK.\n");
       player->location = obj;
       executeLook("around");
+
+      //printf("*noun is %s\n", noun);
+      if(strcmp(noun, "cave") == 0)
+      {
+         int c = 0;
+         printf("A wooden box\n");
+         while(1)
+         {
+            char input[100];
+            
+            printf("\n--> ");
+            fgets(input, sizeof(input), stdin);
+            char *verb = strtok(input, " \n");
+            char *noun = strtok(NULL, " \n");
+            if (strcmp(verb, "open") == 0 && strcmp(noun, "box") == 0 && c != 2)
+            {
+               printf("You need to give the box a gold and a silver coin to open it.");
+               break;
+            }
+            else if(strcmp(verb, "give") == 0 && strcmp(noun, "gold") == 0)
+            {
+               printf("OK."); c++;
+            }
+            else if(strcmp(verb, "give") == 0 && strcmp(noun, "silver") == 0)
+            {
+               printf("OK."); c++;
+            }
+
+            if(strcmp(verb, "open") == 0 && strcmp(noun, "box") == 0 && c == 2)
+            {
+               printf("Congrats! You have managed to navigate this text adventure successfully!! The treasure you find here is yours to collect :)");
+               printf("You have won the game. Type 'quit' to exit");
+               break;
+            }
+         }
+      }
    }
    else if (distance == distHere && obj->destination != NULL)
    {
