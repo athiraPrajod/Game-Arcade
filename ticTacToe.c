@@ -11,13 +11,12 @@ void displayBoard();
 void markBoard(char mark);
 
 //check for draw must be included
-
 void ticTacToe()
 {
-    int gameStatus;
+    char gameStatus;
     
     char mark;     //holds a variable character
-
+    
     player = 1;
     do
     {
@@ -27,23 +26,29 @@ void ticTacToe()
      player = (player%2) ? 1 : 2;
 
      //we need to get the input from the user
-     printf("Player %d, enter a number:", player);
+    mark = (player == 1) ? 'X' : 'O';
+     printf("Player %d -- %c, enter a number:", player,mark);
      scanf("%d", &choice);
 
-     mark = (player == 1) ? 'X' : 'O';
+    
     // set board on user choice or an invalid choice
      markBoard(mark);
 
      gameStatus = checkForWin ();
-     if(gameStatus == 1)
+     if(gameStatus == 'X' || gameStatus == 'O')
      {
-         printf("\nYou have won the game\n");
+         printf("\nCongratulations player %c You have won the game\n",gameStatus);
+         sleep(3);
+     }
+     else if(gameStatus == 'T')
+     {
+         printf("It is a tie :(");
          sleep(3);
      }
      player ++;
 
      
-    } while (gameStatus == -1);
+    } while (gameStatus == 'N');
 }
 /*FUNCTION TO RETURN GAME STATUS
 1 FOR GAME IS OVER WITH RESULT
@@ -84,10 +89,10 @@ int checkForWin()
     square[4]!= '4' && square[5]!= '5' && square[6]!='6' && square[7]!= '7'
     && square[8]!= '8' && square[9]!= '9')
 
-        returnValue = 0;
+        returnValue = 'T';//anu edit - tie i think make into a char
 
     else
-        returnValue = -1;
+        returnValue = 'N';//anu edit - not idea what it does i think if not won and not tie
     return returnValue;                      
 }
 
