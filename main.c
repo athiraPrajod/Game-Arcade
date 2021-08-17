@@ -19,7 +19,6 @@ void main()
             {
             case 1:
                 hangman();
-                sleep(3);
                 break;
             
             case 2:
@@ -35,8 +34,7 @@ void main()
                 scanf("%d", &choice);
             }
 
-            // printf("Do you want to play again? Enter y or n\n");
-            // char ch = 'y';
+            
 
         }
         else

@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "object.h"
-#include "toggle.h"
 
 
 static const char *tags0[] = {"field", NULL};
@@ -32,8 +31,5 @@ OBJ objs[] =
    {"a backroom", tags10, NULL, NULL, "The room is dusty and messy\n"},
    {"an open door to the south", tags11, backroom, NULL, "The door is open"},
    {"a closed door to the south", tags12, cave, NULL, "The door is closed\n"}
-   // {"a backroom"                 , tags10, NULL,NULL, NULL},
-   // {"an open door to the south", tags11, backroom, NULL, NULL, NULL, NULL, NULL},
-   // {"a closed door to the south", tags12, cave, NULL, toggleBackdoor, isAlreadyClosed, NULL, NULL},
-   // {"an open door to the north", tags13, cave, NULL, isAlreadyOpen, toggleBackdoor, NULL, NULL},
+   
 };
