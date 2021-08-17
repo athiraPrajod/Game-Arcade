@@ -13,6 +13,7 @@ void markBoard(char mark);
 //check for draw must be included
 void ticTacToe()
 {
+    system("clear");
     char gameStatus;
     
     char mark;     //holds a variable character

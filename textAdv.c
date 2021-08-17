@@ -68,7 +68,7 @@ static int parseAndExecute()
 
 void textAdv()
 {
-  //system("clear");
+  system("clear");
   printf("Welcome to The Cave Adventure !!\n Instructions: This is a text adventure game. Navigate your way around using a verb, followed by a noun. Eg - go building (and not go to building)\n\n");
   executeLook("around");
   while (getInput() && parseAndExecute());

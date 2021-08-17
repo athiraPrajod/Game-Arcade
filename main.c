@@ -7,7 +7,7 @@ void main()
 {
     while(1)
     {
-        //system("clear");
+        system("clear");
         printf("WELCOME TO OUR GAME ARCADE !\n");
         printf("Enter -\n1. to play hangman\n2. to play the text adventure\n3. to play tic tac toe\n4. to exit\n\n");
 

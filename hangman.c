@@ -2,6 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include "utils.h"
 
 int notin(char word[],int len,char l);
@@ -10,8 +11,9 @@ void figure(int lives);
 
 void hangman()
 {
+    system("clear");
     printf("WELCOME TO OUR GAME HANGMAN\nThe rules are:\nYou must guess a character each chance\n");
-    printf("If the guessed character is correct it gets filled in \nElse you lose a life\nYou only have 7 lives so play wisely\n\n");
+    printf("If the guessed character is correct it gets filled in \nElse you lose a life\nYou only have 6 lives so play wisely\n\n");
     int man = 6;
     figure(man);
     srand(time(NULL));
@@ -86,9 +88,13 @@ void hangman()
            
             printf("CONGRATULATIONS!!! YOU HAVE WON\n");
             printf("YOUR WORD WAS -----   %s\n\n",final);
+            sleep(3);
         }
         if(man == 0)
+        {
             printf("YOU HAVE LOST :( BETTER LUCK NEXT TIME\n");
+            sleep(3);
+        }
     }
 }
 int notin(char word[],int len,char l)//returns 1 when NOT in array
