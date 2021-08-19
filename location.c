@@ -3,9 +3,6 @@
 #include "object.h"
 #include "misc.h"
 
-//#define numberOfLocations   (sizeof(locs) / sizeof(*locs))
-//const int numberOfLocations = (sizeof(locs)/sizeof(*locs));
-
 static unsigned locationOfPlayer = 0;
 
 void executeLook(const char *noun)
@@ -48,7 +45,7 @@ void executeGo(const char *noun)
          while(1)
          {
             char input[100];
-            printf("Here\n");
+            //printf("Here\n");
             printf("\n--> ");
             fgets(input, sizeof(input), stdin);
             char *verb = strtok(input, " \n");
